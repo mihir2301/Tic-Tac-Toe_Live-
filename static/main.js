@@ -1,4 +1,5 @@
-const socket = new WebSocket("wss://localhost:8080/ws");
+const socket = new WebSocket("wss://tic-tac-toelive-production-e0a5.up.railway.app/");
+
 
 const board = document.getElementById("board");
 const gameIDDisplay = document.getElementById("gameID");
