@@ -11,7 +11,7 @@ func Steproutes(router *gin.Engine, wsHandler *websock.Handler) {
 	//static files loading
 
 	router.Static("/static", "./static")
-	router.GET("/home", func(c *gin.Context) {
+	router.GET("/", func(c *gin.Context) {
 		c.File("./static/index.html")
 	})
 
