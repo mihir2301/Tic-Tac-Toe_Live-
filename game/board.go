@@ -58,7 +58,7 @@ func (b *Board) CheckDraw() bool {
 			}
 		}
 	}
-	return true
+	return b.CheckWinner() == ""
 }
 
 //displayboard prints the board in console for debugging

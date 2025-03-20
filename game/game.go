@@ -12,6 +12,8 @@ type Game struct {
 func NewGame(id string) *Game {
 	return &Game{
 		ID:       id,
+		Board:    NewBoard(),
+		Players:  []string{},
 		NextTurn: "X",
 	}
 }

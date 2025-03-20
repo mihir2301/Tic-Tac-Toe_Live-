@@ -8,6 +8,13 @@ import (
 )
 
 func Steproutes(router *gin.Engine, wsHandler *websock.Handler) {
+	//static files loading
+
+	router.Static("/static", "./static")
+	router.GET("/home", func(c *gin.Context) {
+		c.File("./static/index.html")
+	})
+
 	//HealthCheckRoutes
 	router.GET("/health", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"message": "website is working fine"})
