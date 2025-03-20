@@ -1,4 +1,4 @@
-const socket = new WebSocket("ws://localhost:8080/ws");
+const socket = new WebSocket("wss://localhost:8080/ws");
 
 const board = document.getElementById("board");
 const gameIDDisplay = document.getElementById("gameID");
